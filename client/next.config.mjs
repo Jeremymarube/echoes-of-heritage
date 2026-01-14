@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  reactStrictMode: true, // Recommended
+  compiler: {
+    reactRemoveProperties: true, // optional: strips __DEV__ props in production
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
